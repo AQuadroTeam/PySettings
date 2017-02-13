@@ -8,21 +8,21 @@ class SettingsManager:
     settings = False
 
     @staticmethod
-    def getInstance():
+    def getInstance(path = default_file_path):
         if(SettingsManager.__instance == None):
-            SettingsManager.__instance = SettingsManager()
+            SettingsManager.__instance = SettingsManager(path)
         return SettingsManager.__instance
 
     @staticmethod
-    def getSettings():
-        return SettingsManager.getInstance().getCurrentSettings()
+    def getSettings(path = default_file_path):
+        return SettingsManager.getInstance(path).getCurrentSettings()
 
 
-    def __init__(self):
-        self.readConfigurationFromFile()
+    def __init__(self, path):
+        self.readConfigurationFromFile(path)
 
 
-    def readConfigurationFromFile(self, filePath=default_file_path):
+    def readConfigurationFromFile(self, filePath):
         self.filePath = filePath
         # this dict will initialize SettingObject
         dict = {}
