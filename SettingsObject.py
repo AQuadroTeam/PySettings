@@ -14,25 +14,25 @@ class SettingsObject(object):
         return str(self.configDict.get("db_name")[0])
 
     def get_threads_number(self):
-        return int(self.configDict["threads"][0])
+        return int(self.configDict.get("threads")[0])
 
     def get_min_idaudio(self):
-        return int(self.configDict["min_idaudio"][0])
+        return int(self.configDict.get("min_idaudio")[0])
 
     def get_max_idaudio(self):
-        return int(self.configDict["max_idaudio"][0])
+        return int(self.configDict.get("max_idaudio")[0])
 
     def get_path_music(self):
-        return str(self.configDict["path_music"][0])
+        return str(self.configDict.get("path_music")[0])
 
     def get_m2o_reloaded_url(self):
-        return str(self.configDict["m2o_reloaded_url"][0])
+        return str(self.configDict.get("m2o_reloaded_url")[0])
 
     def get_m2o_player_url(self):
-        return str(self.configDict["m2o_player_url"][0])
+        return str(self.configDict.get("m2o_player_url")[0])
 
     def get_db_engine(self):
-        return str(self.configDict["db_engine"][0])
+        return str(self.configDict.get("db_engine")[0])
 
     def __str__(self):
         string = "Configuration:\n"
