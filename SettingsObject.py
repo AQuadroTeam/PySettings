@@ -11,7 +11,7 @@ class SettingsObject(object):
         return json.dumps(self.configDict)
 
     def get_dbname(self):
-        return str(self.configDict["dbname"][0])
+        return str(self.configDict.get("db_name")[0])
 
     def get_threads_number(self):
         return int(self.configDict["threads"][0])

@@ -30,7 +30,8 @@ class SettingsManager:
         with open(filePath, 'r') as f:
             for line in f:
                 splitLine = line.split()
-                dict[splitLine[0]] = splitLine[1:]
+		if len(splitLine)>1:
+	                dict[splitLine[0]] = splitLine[1:]
             f.close()
 
         self.settings = SettingsObject(dict)
