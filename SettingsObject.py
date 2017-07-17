@@ -34,6 +34,13 @@ class SettingsObject(object):
     def get_db_engine(self):
         return str(self.configDict.get("db_engine")[0])
 
+    def get_station_name(self):
+        return str(self.configDict.get("station_name")[0])
+
+    def get_base_url_muoversiaroma(self):
+
+        return str(self.configDict.get("base_url_muoversiaroma")[0])
+
     def __str__(self):
         string = "Configuration:\n"
         for (key,value) in self.configDict.iteritems() :
