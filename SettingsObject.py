@@ -38,8 +38,10 @@ class SettingsObject(object):
         return str(self.configDict.get("station_name")[0])
 
     def get_base_url_muoversiaroma(self):
-
         return str(self.configDict.get("base_url_muoversiaroma")[0])
+
+    def get_interval_second_log(self):
+        return int(self.configDict.get("interval_second_log")[0])
 
     def __str__(self):
         string = "Configuration:\n"
