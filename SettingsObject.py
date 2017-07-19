@@ -43,6 +43,17 @@ class SettingsObject(object):
     def get_interval_second_log(self):
         return int(self.configDict.get("interval_second_log")[0])
 
+    def get_threshold_min(self):
+        return int(self.configDict.get("threshold_min")[0])
+
+    def get_threshold_max(self):
+        return int(self.configDict.get("threshold_max")[0])
+
+    def get_day_to_simulate(self):
+        import datetime
+        return datetime.datetime.strptime(self.configDict.get("day_to_simulate")[0], "%Y-%m-%d")
+
+
     def __str__(self):
         string = "Configuration:\n"
         for (key,value) in self.configDict.iteritems() :
