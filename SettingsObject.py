@@ -51,12 +51,17 @@ class SettingsObject(object):
 
     def get_begin_simulation(self):
         import datetime
-        return datetime.datetime.strptime(self.configDict.get("begin_simulation")[0], "%Y-%m-%d %H:%M:%s")
+        return datetime.datetime.strptime(self.configDict.get("begin_simulation")[0], "%Y-%m-%d/%H:%M:%S")
 
     def get_end_simulation(self):
         import datetime
-        return datetime.datetime.strptime(self.configDict.get("end_simulation")[0], "%Y-%m-%d %H:%M:%s")
+        return datetime.datetime.strptime(self.configDict.get("end_simulation")[0], "%Y-%m-%d/%H:%M:%S")
 
+    def get_sampling_rate(self):
+        return int(self.configDict.get("sampling_rate")[0])
+
+    def get_verbosity(self):
+        return int(self.configDict.get("verbosity")[0])
 
     def __str__(self):
         string = "Configuration:\n"
