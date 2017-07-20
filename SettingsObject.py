@@ -63,6 +63,10 @@ class SettingsObject(object):
     def get_verbosity(self):
         return int(self.configDict.get("verbosity")[0])
 
+    def get_pause_duration(self):
+        return int(self.configDict.get("pause_duration")[0])
+
+
     def __str__(self):
         string = "Configuration:\n"
         for (key,value) in self.configDict.iteritems() :
