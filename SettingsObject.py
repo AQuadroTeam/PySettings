@@ -49,9 +49,13 @@ class SettingsObject(object):
     def get_threshold_max(self):
         return int(self.configDict.get("threshold_max")[0])
 
-    def get_day_to_simulate(self):
+    def get_begin_simulation(self):
         import datetime
-        return datetime.datetime.strptime(self.configDict.get("day_to_simulate")[0], "%Y-%m-%d")
+        return datetime.datetime.strptime(self.configDict.get("begin_simulation")[0], "%Y-%m-%d %H:%M:%s")
+
+    def get_end_simulation(self):
+        import datetime
+        return datetime.datetime.strptime(self.configDict.get("end_simulation")[0], "%Y-%m-%d %H:%M:%s")
 
 
     def __str__(self):
