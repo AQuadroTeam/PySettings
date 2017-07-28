@@ -43,6 +43,12 @@ class SettingsObject(object):
     def get_db_ip(self):
         return str(self.configDict.get("db_ip")[0])
 
+    def get_min_port(self):
+        return str(self.configDict.get("min_port")[0])
+
+    def get_max_port(self):
+        return str(self.configDict.get("max_port")[0])
+
     def get_station_name(self):
         return str(self.configDict.get("station_name")[0])
 
