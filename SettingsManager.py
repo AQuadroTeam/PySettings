@@ -1,7 +1,8 @@
 #! /usr/bin/env python
 from SettingsObject import SettingsObject
 
-default_file_path = "./settings.txt"
+default_file_path = "../settings.txt"
+
 
 class SettingsManager:
     __instance = None

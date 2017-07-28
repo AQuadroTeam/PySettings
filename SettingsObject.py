@@ -34,6 +34,15 @@ class SettingsObject(object):
     def get_db_engine(self):
         return str(self.configDict.get("db_engine")[0])
 
+    def get_db_user(self):
+        return str(self.configDict.get("db_user")[0])
+
+    def get_db_password(self):
+        return str(self.configDict.get("db_password")[0])
+
+    def get_db_ip(self):
+        return str(self.configDict.get("db_ip")[0])
+
     def get_station_name(self):
         return str(self.configDict.get("station_name")[0])
 
@@ -68,7 +77,6 @@ class SettingsObject(object):
 
     def get_bus_buffer(self):
         return int(self.configDict.get("bus_buffer")[0])
-
 
     def __str__(self):
         string = "Configuration:\n"
