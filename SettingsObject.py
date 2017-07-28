@@ -49,6 +49,9 @@ class SettingsObject(object):
     def get_max_port(self):
         return str(self.configDict.get("max_port")[0])
 
+    def get_event_ids(self):
+        return str(self.configDict.get("event_ids"))
+
     def get_station_name(self):
         return str(self.configDict.get("station_name")[0])
 
