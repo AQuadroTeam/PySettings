@@ -52,6 +52,15 @@ class SettingsObject(object):
     def get_event_ids(self):
         return self.configDict.get("event_ids")
 
+    def get_netserver_key(self):
+        return str(self.configDict.get("netserver_key")[0])
+
+    def get_netserver_crt(self):
+        return str(self.configDict.get("netserver_crt")[0])
+
+    def get_ca_crt(self):
+        return str(self.configDict.get("ca_crt")[0])
+
     def get_station_name(self):
         return str(self.configDict.get("station_name")[0])
 
@@ -86,6 +95,8 @@ class SettingsObject(object):
 
     def get_bus_buffer(self):
         return int(self.configDict.get("bus_buffer")[0])
+
+
 
     def __str__(self):
         string = "Configuration:\n"
