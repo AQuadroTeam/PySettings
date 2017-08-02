@@ -52,6 +52,9 @@ class SettingsObject(object):
     def get_event_ids(self):
         return self.configDict.get("event_ids")
 
+    def get_mininet_clients(self):
+        return self.configDict.get("mininet_clients")
+
     def get_netserver_key(self):
         return str(self.configDict.get("netserver_key")[0])
 
