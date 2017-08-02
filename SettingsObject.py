@@ -38,7 +38,11 @@ class SettingsObject(object):
         return str(self.configDict.get("db_user")[0])
 
     def get_db_password(self):
-        return str(self.configDict.get("db_password")[0])
+        file = str(self.configDict.get("db_password")[0])
+        with open(file) as ff:
+            res = ff.readlines()[0]
+            res = res.rstrip("\n")
+            return res
 
     def get_db_ip(self):
         return str(self.configDict.get("db_ip")[0])
