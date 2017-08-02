@@ -62,7 +62,7 @@ class SettingsObject(object):
         return str(self.configDict.get("netserver_crt")[0])
 
     def get_default_client_port(self):
-        return self.configDict.get("default_client_port")[0])
+        return str(self.configDict.get("default_client_port")[0])
 
     def get_ca_crt(self):
         return str(self.configDict.get("ca_crt")[0])
